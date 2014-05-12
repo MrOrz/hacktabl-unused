@@ -9,4 +9,4 @@ require.config do
       exports: 'angular'
 
 # Kickstart
-require ['app']
+require ['./app']

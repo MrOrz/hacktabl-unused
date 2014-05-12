@@ -6,6 +6,7 @@ group :development do
   gem "rb-fsevent"
   gem "slim"
 
+  gem 'growl'
   gem "guard"
   gem "guard-compass"
   gem "guard-livereload"

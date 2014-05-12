@@ -3,7 +3,7 @@
 
 guard 'livereload' do
   watch("index.html")
-  watch(%r{public/.+/.+\.(css|js|html)})
+  watch(%r{^public/.+/.+\.(css|js|html)})
 end
 
 # Add files and commands to this file, like the example:
@@ -12,9 +12,14 @@ end
 guard :shell do
 
   # Livescript compiler
-  watch(%r{app/livescript/(.+)\.ls}) do |m|
+  watch(%r{^app/livescript/(.+)\.ls}) do |m|
     puts "Compiling #{m[0]}"
-    `lsc -c -o public/javascripts/ #{m[0]}`
+    results = `lsc -c -o public/javascripts/ #{m[0]}`
+    if results.empty?
+      n "#{m[0]}", "Compilation Successful", :success
+    else
+      n results, "Compilation Failed", :failed
+    end
   end
 end
 
@@ -36,10 +41,10 @@ guard :compass, configuration_file: "config/compass.rb"
 
 # Index page
 guard "slim", input: "./", output: "./" do
-  watch("index.slim")
+  watch(%r{^index\.slim})
 end
 
 # Angular templates
 guard "slim", input: "app/slim", output: "public/templates" do
-  watch(%r{app/slim/(.+)\.slim})
+  watch(%r{^app/slim/(.+)\.slim})
 end

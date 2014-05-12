@@ -29,6 +29,7 @@ GEM
     ffi (1.9.3)
     formatador (0.2.4)
     fssm (0.2.10)
+    growl (1.0.3)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -77,6 +78,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   compass (~> 0.12.6)
+  growl
   guard
   guard-compass
   guard-livereload

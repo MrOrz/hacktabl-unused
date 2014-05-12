@@ -10,5 +10,5 @@
       }
     }
   });
-  require(['app']);
+  require(['./app']);
 }).call(this);
