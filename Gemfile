@@ -3,10 +3,13 @@ source "https://rubygems.org"
 group :development do
   gem "bootstrap-sass", "~> 3.1.1"
   gem "compass", "~> 0.12.6"
-  gem "rb-fsevent"
   gem "slim"
 
+  # Guard utilities
+  gem "rb-fsevent"
   gem 'growl'
+
+  # Guard and its plugins
   gem "guard"
   gem "guard-compass"
   gem "guard-livereload"
