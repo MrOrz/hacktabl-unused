@@ -1,0 +1,26 @@
+{
+  "name": "hacktabl",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MrOrz/hacktabl",
+  "authors": [
+    "MrOrz <johnsonliang7@gmail.com>"
+  ],
+  "description": "Hacktabl stacks for/against views with multiple perspectives in a sleek and clear table view.",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2"
+  },
+  "directory": "vendor/bower_components"
+}
