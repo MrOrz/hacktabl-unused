@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
+    "requirejs": "http://requirejs.org/docs/release/2.1.11/minified/require.js",
     "angular": "1.2"
   },
   "directory": "vendor/bower_components"

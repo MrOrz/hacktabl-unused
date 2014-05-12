@@ -1,6 +1,10 @@
 doctype html
-html
+html ng-app="app"
   head
     title Hello World
-  body
+  body ng-controller="TestCtrl"
     h1 It works!
+    h2
+      | {{test}}
+
+    script src="vendor/bower_components/requirejs/index.js" data-main="public/javascripts/main.js"
