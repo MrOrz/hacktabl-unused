@@ -3,13 +3,15 @@ Hacktabl
 
 Hacktabl stacks for/against views with multiple perspectives with a sleek and clear table view.
 
+Behind the hood, the site will be purely static, using [ethercalc](ethercalc.org) to maintain tabular information and [Hackpads](http://hackpad.com) to store individual cell data.
+
 Development
 -----------
 
 ### Requirements
 
 * `ruby` for development dependency management.
-* `bower` for front-end dependenchy management.
+* `bower` for front-end dependency management.
 * `thin` for localhost server (any rack server will do though).
 * Mac OSX `grunt` for guard notifications.
 
