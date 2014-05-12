@@ -2,19 +2,22 @@
 # More info at https://github.com/guard/guard#readme
 
 guard 'livereload' do
-  watch(%r{app/views/.+\.(erb|haml|slim)$})
-  watch(%r{app/helpers/.+\.rb})
-  watch(%r{public/.+\.(css|js|html)})
-  watch(%r{config/locales/.+\.yml})
-  # Rails Assets Pipeline
-  watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
+  watch("index.html")
+  watch(%r{public/.+/.+\.(css|js|html)})
 end
 
 # Add files and commands to this file, like the example:
-#   watch(%r{file/path}) { `command(s)` }
+# watch(/(.*).txt/) {|m| `tail #{m[0]}` }
 #
 guard :shell do
-  watch(/(.*).txt/) {|m| `tail #{m[0]}` }
+
+  # Livescript compiler
+  watch(%r{app/livescript/(.+)\.ls}) do |m|
+    puts "Compiling #{m[0]}"
+    `lsc -c -o public/javascripts/ #{m[0]}`
+  end
+end
+
 # Guard::Compass
 #
 # You don't need to configure watchers for guard 'compass' declaration as they generated
@@ -30,4 +33,13 @@ guard :shell do
 
 # guard 'compass', project_path: 'not_current_dir', configuration_file: 'path/to/my/compass_config.rb'
 guard :compass, configuration_file: "config/compass.rb"
+
+# Index page
+guard "slim", input: "./", output: "./" do
+  watch("index.slim")
+end
+
+# Angular templates
+guard "slim", input: "app/slim", output: "public/templates" do
+  watch(%r{app/slim/(.+)\.slim})
 end
