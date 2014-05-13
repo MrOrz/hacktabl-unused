@@ -10,7 +10,7 @@ Development
 
 ### Requirements
 
-* `ruby` for development dependency management.
+* `bundler` for development dependency management.
 * `bower` for front-end dependency management.
 * `thin` for localhost server (any rack server will do though).
 * Mac OSX `grunt` for guard notifications.
@@ -22,6 +22,7 @@ After cloning, inside the project directory:
 
 ```
 $ bundle install
+$ npm install
 ```
 
 The following scripts would be handy during development.
