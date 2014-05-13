@@ -1410,7 +1410,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #cccccc;
+  background-color: white;
 }
 
 /* line 39, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -3169,7 +3169,7 @@ th {
 }
 /* line 56, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_tables.scss */
 .table .table {
-  background-color: #cccccc;
+  background-color: white;
 }
 
 /* line 70, ../../../../.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_tables.scss */

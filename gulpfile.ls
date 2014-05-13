@@ -34,6 +34,7 @@ gulp.task \compass, ->
       config_file: 'config/compass.rb'
       css: 'public/stylesheets'
       sass: 'app/sass'
+    .pipe notify()
     .pipe gulp.dest 'public/stylesheets'
 
 # Livescript compilation
@@ -76,10 +77,10 @@ gulp.task \server, !(cb) ->
 gulp.task \watch, <[server]>, ->
   server = livereload()
 
-  notifyChangeToServer = (file) ->
-    server.changed file.path
+  gulp.watch ['app/slim/*.slim', 'index.slim'], <[slim]>
+  gulp.watch ['app/sass/*.sass'], <[compass]>
 
-  gulp.watch ['app/slim/*.slim', 'index.slim'], <[slim]> .on 'change', notifyChangeToServer
-  gulp.watch ['app/sass/*.sass'], <[compass]> .on 'change', notifyChangeToServer
+  gulp.watch ['index.html', 'public/**/*']
+      .on 'change', (file) -> server.changed file.path
 
 gulp.task \deploy, <[clean build push]>
