@@ -10,5 +10,7 @@
       }
     }
   });
-  require(['./app']);
+  require(['angular', './app'], function(angular){
+    return angular.bootstrap(document, ['app']);
+  });
 }).call(this);

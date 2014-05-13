@@ -9,4 +9,5 @@ require.config do
       exports: 'angular'
 
 # Kickstart
-require ['./app']
+require <[angular ./app]>, (angular) ->
+  angular.bootstrap document, <[app]>
