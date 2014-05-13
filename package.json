@@ -24,7 +24,9 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/karma/bin/karma start test/karma.conf.js",
+    "start": "gulp --require LiveScript watch",
+    "deploy": "gulp --require LiveScript deploy"
   },
   "repository": {
     "type": "git",

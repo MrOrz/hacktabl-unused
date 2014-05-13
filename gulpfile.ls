@@ -71,7 +71,7 @@ gulp.task \server, !(cb) ->
   server.use connect.static('./') .listen(port, cb)
 
 
-# watchers
+# watchers & servers
 #
 gulp.task \watch, <[server]>, ->
   server = livereload()

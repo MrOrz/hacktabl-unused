@@ -12,8 +12,6 @@ Development
 
 * `bundler` for development dependency management.
 * `bower` for front-end dependency management.
-* `thin` for localhost server (any rack server will do though).
-* Mac OSX `grunt` for guard notifications.
 
 
 ### Setup
@@ -23,30 +21,35 @@ After cloning, inside the project directory:
 ```
 $ bundle install
 $ npm install
+$ npm install gulp --global
 ```
 
 The following scripts would be handy during development.
 
 ### Operations
 
-#### Listen to file changes
+#### Start development environment
 
-Including `slim`, `sass` and `ls` files.
+file watching tasks & development server
 
-```
-$ bundle exec guard
-```
-
-#### Build production site
+Opens up a connect server, watches `slim`, `sass` and `ls` files, and rebuilds them on the fly, reload the browser.
 
 ```
-$ make build
+$ npm start
 ```
 
-#### Clean built production site
+#### Deploy to github
+
+Use r.js to build the site in `build/`, and pushes to the branch `gh-pages`.
 
 ```
-$ make clean
+$ npm run deploy
+```
+
+#### Execute unit tests
+
+```
+$ npm test
 ```
 
 #### Run development server
