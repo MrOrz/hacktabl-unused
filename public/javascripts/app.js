@@ -1,0 +1,1 @@
+(function(){define(["angular","./app-controller"],function(e){return e.module("app",["app.controller"])})}).call(this);

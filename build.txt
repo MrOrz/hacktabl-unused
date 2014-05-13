@@ -1,0 +1,15 @@
+
+public/stylesheets/styles.css
+----------------
+public/stylesheets/styles.css
+
+vendor/bower_components/angular/angular-csp.css
+----------------
+vendor/bower_components/angular/angular-csp.css
+
+public/javascripts/main.js
+----------------
+vendor/bower_components/angular/angular.js
+public/javascripts/app-controller.js
+public/javascripts/app.js
+public/javascripts/main.js

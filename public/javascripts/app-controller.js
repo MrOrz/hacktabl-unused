@@ -1,0 +1,1 @@
+(function(){define(["angular"],function(e){var t;return t=e.module("app.controller",[]),t.controller("TestCtrl",["$scope",function(e){console.log("TestCtrl Operational"),e.test="Angular also works!"}])})}).call(this);
