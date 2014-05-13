@@ -19,5 +19,5 @@
     }
   ],
 
-  fileExclusionRegExp: /(^\.)|(^config\/)|(^app\/)|(^script\/)|(^vendor\/bootstrap\/)/
+  fileExclusionRegExp: /(^\.)|(^config$)|(^config\.ru$)|(^app$)|(^script$)|(^vendor\/bootstrap$)|(^node_modules$)|(^test$)/
 })
